@@ -1,77 +1,191 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Task2</title>
-    <script src="script1.js" charset="utf-8"></script>
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <title>Task2</title>
+  <script src="script1.js" charset="utf-8"></script>
+
   <style media="screen">
-  header{
-        display: flex;
-        width:100%;
-        height: auto;
-        background:#1a237e;
-        color:white;
-      }
-      *{
-        font-family: 'Rubik', sans-serif;
-      }
-      .roll{
-        ;
-      }
-      .name{
+    header {
+      display: flex;
+      width: 100%;
+      height: auto;
+      background: #1a237e;
+      color: white;
+    }
 
-        text-align-last: right;
-      }
-      .name img{
+    * {
+      font-family: 'Rubik', sans-serif;
+    }
 
-        width: 25%;
-        height:auto;
-      }
+    .roll {
+      ;
+    }
 
-      .header_wrapper {
-        width:100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .name {
 
-        padding: 0px 43px;
-      }
-      .task1{
-        text-align: center;
+      text-align-last: right;
+    }
 
-      }
+    .name img {
+
+      width: 25%;
+      height: auto;
+    }
+
+    .header_wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 0px 43px;
+    }
+
+    main {
+      width: 100%;
+    }
+
+    .task2 {
+      text-align: center;
+      margin-bottom: 20px;
+
+    }
+
+    .content {
+      width: 100%;
+
+    }
+
+    .content-wrapper {
+      border-top: 4px solid #1a237e;
+      width: 65%;
+      margin: 0 auto;
+
+    }
+
+    .content-wrapper {
+      border-top: 4px solid #1a237e;
+      width: 65%;
+      margin: 0 auto;
+
+    }
+
+    .points {
+      margin: 2px, 10px, 2px, 0px;
+    }
+
+    .code {
+      background: #301934;
+      color: white;
+    }
+
+    .code-wrapper {
+      padding: 6px 0px 5px 20px;
+    }
+
+    footer {
+      background-color: #0b1258;
+    }
+
+    .footc {
+      color: white;
+      text-align: center;
+      padding-bottom: 2px;
+    }
   </style>
-  <body>
-    <header>
-      <div class="header_wrapper">
-        <div class="roll">
-          <h2>2006118</h2>
-          <h2>CS3403</h2>
-        </div>
-        <div class="name">
-          <a href="https://www.linkedin.com/in/smriti-gupta-820642202/"><img src="img\smriti.png" alt=""></a>
-          <h2>Smriti Gupta</h2>
-        </div>
+</head>
+
+<body>
+  <header>
+    <div class="header_wrapper">
+      <div class="roll">
+        <h2>2006118</h2>
+        <h2>CSL3403</h2>
       </div>
-    </header>
-    <main>
-      <div class="task1">
-        <h1>Assignment 5</h1>
-        <h3>JS Assignment</h3>
-        <h2>Task 2</h2>
+      <div class="name">
+        <a href="https://www.linkedin.com/in/smriti-gupta-820642202/"><img src="img\smriti.png" alt=""></a>
+        <h2>Smriti Gupta</h2>
       </div>
+    </div>
+  </header>
+  <main>
+    <div class="task2">
+      <h1>Assignment 5</h1>
+      <h3>JS Assignment</h3>
+      <h2>Task 2</h2>
+    </div>
+    <div class="content-wrapper">
       <div class="content">
         <div class="question">
           <h4>Show the Scope of variables in JS using HTML page.</h4>
         </div>
         <div class="ans">
+          <p>JavaScript has 3 types of scope:</p>
+          <div class="points">
+            <ul>
+              <li>Block Scope</li>
+              <li>Function Scope</li>
+              <li>Global Scope</li>
+            </ul>
+          </div>
+          <p>Before ES6 (2015), JavaScript had only Global Scope and Function Scope.</p>
+          <hr>
+          <p>We will use the same variable x to demonstrate the scope of variables in JS</p>
+          <h3>1. Block Scope</h3>
+          <p>ES6 introduced two important new JavaScript keywords: let and const.</p>
+          <p>These two keywords provide Block Scope in JavaScript.</p>
+          <p>Variables declared inside a { } block cannot be accessed from outside the block:</p> <br>
+          <p>Example:</p>
+          <p>Here we can use the varible x only in the {}</p>
+          <div class="code">
+            <div class="code-wrapper">
+
+              <p>{</p>
+              <p>&nbsp &nbsp let x = 5;</p>
+              <p>&nbsp&nbsp function scope(){</p>
+              <p>&nbsp&nbsp&nbsp&nbsp alert("Value of variable x in the block: " + x)</p>
+              <p>&nbsp&nbsp }</p>
+              <p>}</p>
+              <p>&nbsp// x cannot be used here</p>
+
+            </div>
+          </div>
+          <h3>2. Function Scope</h3>
+          <p>JavaScript has function scope: Each function creates a new scope.</p>
+          <p>Variables defined inside a function are not accessible (visible) from outside the function.</p>
+          <p>Variables declared with var, let and const are quite similar when declared inside a function.</p>
+          <h3>3. Global Scope</h3>
+          <p>Variables declared Globally (outside any function) have Global Scope.</p>
+          <p>Global variables can be accessed from anywhere in a JavaScript program.</p>
+          <p>Variables declared with var, let and const are quite similar when declared outside a block.</p>
+          <p>Example:</p>
+          <p>We will use the variable x to demonstrate global and function scope</p>
+          <div class="code">
+            <div class="code-wrapper">
+              <p>var x = 15; // x defined globally</p>
+              <p>function scopeFunction(){</p>
+              <p>var x = 45;</p>
+              <p>&nbsp&nbsp&nbsp&nbsp alert("Value of variable x in the function: " + x)</p>
+              <p>}</p>
+              <p>&nbsp&nbsp&nbsp&nbspfunction scopeGlobal(){</p>
+              <p>&nbsp&nbsp&nbsp&nbspalert("Value of variable x globally: " + x)</p>
+              <p>}</p>
+            </div>
+          </div>
 
         </div>
       </div>
-    </main>
-    <footer>
+    </div>
 
-    </footer>
-  </body>
+  </main>
+  <footer>
+    <button type="button" name="button"><a href="https://github.com/connectsmriti/js-Assignment_Assignment5">View Code</a>
+    </button>
+    <button type="button" name="button"><a href="https://connectsmriti.github.io/js-Assignment_Assignment5/task3.html">Go to Task 3</a> </button>
+    <h3 class="footc">All © to Smriti Gupta</h3>
+  </footer>
+</body>
+
 </html>
